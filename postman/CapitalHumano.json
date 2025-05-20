@@ -1,0 +1,348 @@
+{
+  "info": {
+    "name": "CapitalHumano",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "delete candidato by id",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/13",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "13"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidato by id",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidatos 2 años antiguedad",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/candidatosCon2Antiguedad",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "candidatosCon2Antiguedad"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidatos en tlalpan",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/getCandidatosEnTlalpan",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "getCandidatosEnTlalpan"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidatos laborando actualmente",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/getCandidatosEnTlalpan",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "getCandidatosEnTlalpan"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidatos por Empresa",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/candidatosPorEmpresa?empresa=coca",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "candidatosPorEmpresa"
+          ],
+          "query": [
+            {
+              "key": "empresa",
+              "value": "coca"
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "post Empleo",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/empleo/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "empleo",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombreEmpresa\": \"Coca-Coli\",\n  \"fechaIngreso\": \"2020-01-01\",\n  \"fechaSalida\": null,\n  \"ingresoMensual\": 10200.00,\n  \"giroEmpresa\": \"Bebidas\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "post candidato",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombres\": \"Isaac\",\n  \"apellidos\": \"Pérez García\",\n  \"email\": \"juan.perez@example.com\",\n  \"fechaNacimiento\": \"1990-06-15\",\n  \"rfc\": \"JUAP900615ABC\",\n  \"telefono\": \"5551234567\",\n  \"domicilio\": {\n    \"calle\": \"Av. Insurgentes Sur\",\n    \"numero\": \"123\",\n    \"colonia\": \"Tlalpan Centro\",\n    \"ciudad\": \"Ciudad de México\",\n    \"estado\": \"CDMX\",\n    \"pais\": \"México\",\n    \"codigoPostal\": \"14000\"\n  },\n  \"empleos\": [\n    {\n      \"nombreEmpresa\": \"Coca-Cola\",\n      \"fechaIngreso\": \"2018-01-10\",\n      \"fechaSalida\": \"2021-03-15\",\n      \"ingresoMensual\": 12000.50,\n      \"giroEmpresa\": \"Bebidas\"\n    },\n    {\n      \"nombreEmpresa\": \"Bimbo\",\n      \"fechaIngreso\": \"2021-04-01\",\n      \"fechaSalida\": null,\n      \"ingresoMensual\": 13500.75,\n      \"giroEmpresa\": \"Alimentos\"\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "get Candidatos con 5 años de antiguedad",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/getCandidatosCon5AniosAntiguedad",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "getCandidatosCon5AniosAntiguedad"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "get Candidatos",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "put Candidato",
+      "event": [],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/candidato/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "candidato",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombres\": \"Isac\",\n  \"apellidos\": \"Pérez García\",\n  \"email\": \"juan.perez@example.com\",\n  \"fechaNacimiento\": \"1990-06-15\",\n  \"rfc\": \"JUAP900615ABC\",\n  \"telefono\": \"5551234567\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "get Empleo by id",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/empleo/7",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "empleo",
+            "7"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "variable": []
+}
