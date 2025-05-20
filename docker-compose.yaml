@@ -1,0 +1,14 @@
+name: pruebaS
+services:
+  database:
+    container_name: oracle19.3
+    ports:
+      - 1521:1521
+      - 5500:5500
+    environment:
+      - ORACLE_PDB=capitalH
+      - ORACLE_PWD=MiPassWord123!
+      - ORACLE_MEM=3000
+    volumes:
+      - ./oradata:/opt/oracle/oradata
+    image: oracle/database:19.3.0-ee
