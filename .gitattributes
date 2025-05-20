@@ -1,0 +1,20 @@
+# Set default behavior to automatically normalize line endings to LF in the repository
+* text=auto eol=lf
+
+# Explicitly set line endings for specific file types if needed
+*.sh text eol=lf
+*.py text eol=lf
+*.java text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+
+# Ensure .gitattributes itself uses LF
+.gitattributes text eol=lf
+
+# For binary files, ensure no conversion is done
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.exe binary
+# ... other binary file types
